@@ -1,24 +1,99 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション名
+## chef_log
 
-Things you may want to cover:
+# アプリケーション概要
+- 自分の作った料理を記録し,投稿シェアできるサービス。
 
-* Ruby version
+# URL
 
-* System dependencies
 
-* Configuration
+# テスト用アカウント
+- testdesu@test.com
+- kisk0106
 
-* Database creation
+# 利用方法
+- 新規登録またはログイン
+------------------------------------------------------------
+- [新規投稿]をクリック
+- 料理の画像を添付、レシピ名、作り方を記入
+- [投稿]をクリックで投稿完了
+------------------------------------------------------------
+- [マイページ]をクリックすると、投稿した料理を一覧できる。
+- [編集]をクリックで編集
+- [削除]をクリックで削除
+------------------------------------------------------------
+- [レシピ一覧]をクリックで投稿されている料理を一覧できる。
+- 一覧の料理をクリックすると、レシピ詳細が一覧できる。
+------------------------------------------------------------
+- [シェフ一覧]をクリックすると、登録ユーザーが一覧できる。
+- [シェフ一覧]のユーザーをクリックすると、プロフィールを一覧できる。
+------------------------------------------------------------
 
-* Database initialization
+# 目指した課題解決
+### 課題
+- 美味しくできた料理のレシピの記録を残したい。
+- 料理をもっと楽しくしたい。
+- レパートリーを増やしたい。
+### 解決
+- 自分が作った料理を記録し、レシピ詳細を振り返る事ができる事。
+- 自分が作った料理を他ユーザーに見てもらう事、また見ることにより料理に対するモチベーションの向上ができる事。
+- 他ユーザーが作った料理を見て、レパートリーを増やす事ができる事。
 
-* How to run the test suite
+# 要件定義
+- ログイン機能(devise)
+- 画像投稿機能
+- 投稿一覧表示機能
+- 投稿詳細表示機能
+- 投稿編集機能
+- 投稿削除機能
 
-* Services (job queues, cache servers, search engines, etc.)
+# GIF 
+- 料理の投稿→料理詳細→投稿料理の一覧表示
+[![Image from Gyazo](https://i.gyazo.com/8618f23b14958346e69467144d03d690.gif)](https://gyazo.com/8618f23b14958346e69467144d03d690)
 
-* Deployment instructions
+# 実装予定の機能
+- お気に入り機能
+- 検索機能
 
-* ...
+# ER図
+[![Image from Gyazo](https://i.gyazo.com/99fb6a25c6acd7270d093a1be1a25d29.png)](https://gyazo.com/99fb6a25c6acd7270d093a1be1a25d29)
+
+# 環境
+## [バージョン]
+- Ruby : 2.5.7
+- Ruby on Rails : 5.2.4.1
+## [データベース]
+- MySQL
+## [バージョン管理]
+- Git
+- GitHub
+-------------------------------------------------------
+
+# テーブル設計
+
+## users テーブル
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| username           | string | null: false |
+| profile            | text   |             |
+| profile_image      | string |             |
+| password           | string | null: false |
+| email              | string | null: false |
+
+### Association
+- has_many :recipes
+
+
+## recipes テーブル
+| Column             | Type       | Options                             |
+| ------------------ | ---------- | ----------------------------------- |
+| image              | string     | null: false                         |
+| title              | string     | null: false                         |
+| body               | text       | null: false                         |
+| user               | references | null: false, foreign_key: true      |
+
+
+### Association
+- belongs_to :user
