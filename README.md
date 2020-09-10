@@ -7,11 +7,14 @@
 - 自分の作った料理を記録し,投稿シェアできるサービス。
 
 # URL
-
+- https://chef-log.herokuapp.com/
 
 # テスト用アカウント
 - testdesu@test.com
 - kisk0106
+### Basic認証
+- ID: kisk
+- Pass: 2065
 
 # 利用方法
 - 新規登録またはログイン
