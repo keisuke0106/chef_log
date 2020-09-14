@@ -8,6 +8,7 @@
 
 # URL
 - https://chef-log.herokuapp.com/
+- herokuでデプロイしているため、herokuの仕様により本番環境にアクセス頂いた際に画像リンクが切れている可能性がございます。
 
 # テスト用アカウント
 - testdesu@test.com
@@ -53,12 +54,18 @@
 - 投稿削除機能
 
 # GIF 
+
+- ログイン画面→ユーザー一覧→マイページ
+[![Image from Gyazo](https://i.gyazo.com/fd3a352e1b6be37877ce5dd65ececb52.gif)](https://gyazo.com/fd3a352e1b6be37877ce5dd65ececb52)
+
 - 料理の投稿→料理詳細→投稿料理の一覧表示
 [![Image from Gyazo](https://i.gyazo.com/8618f23b14958346e69467144d03d690.gif)](https://gyazo.com/8618f23b14958346e69467144d03d690)
+
 
 # 実装予定の機能
 - お気に入り機能
 - 検索機能
+- 本番環境でも画像表示ができるようにする事
 
 # ER図
 [![Image from Gyazo](https://i.gyazo.com/99fb6a25c6acd7270d093a1be1a25d29.png)](https://gyazo.com/99fb6a25c6acd7270d093a1be1a25d29)
